@@ -4,7 +4,6 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
-import SwipeableTemporaryDrawer from '/home/aditya/Documents/reactexpress/client/src/components/drawer/drawer';
 import './appbar.css';
 
 

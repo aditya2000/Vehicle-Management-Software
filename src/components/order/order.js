@@ -11,7 +11,8 @@ const Order = ({ match, data }) => {
 return (<div>
     <ButtonAppBar color="secondary"/>
     <h1>Orders</h1>
-    <h2>{veh.vehNum}</h2>
+    <h2>{veh.driverName}</h2>
+    <h2>{veh.driverNum}</h2>
     <FloatingActionButtons color='secondary'/>
   </div>)
 }
