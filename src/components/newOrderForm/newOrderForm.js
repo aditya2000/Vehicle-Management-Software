@@ -10,23 +10,23 @@ class NewOrderForm extends Component {
     return (
       <div className="orderForm">
       <h1>Add New Order</h1>
-      <form>
+      <form name="newOrderForm">
           <FormControl fullWidth >
-          <TextField id="order-id" label="Order Id" margin="normal"/>
+          <TextField id="order-id" label="Order Id" margin="normal" name="order-id"/>
           </FormControl>
 
-          <TextField id="creaser-name" label="Creaser Name" margin="normal"/>&nbsp;&nbsp;&nbsp;<TextField id="fuel-vendor" label="Fuel Vendor" margin="normal"/>&nbsp;&nbsp;&nbsp;
+          <TextField id="creaser-name" label="Creaser Name" margin="normal" name="creaser-name"/>&nbsp;&nbsp;&nbsp;<TextField id="fuel-vendor" label="Fuel Vendor" margin="normal" name="fuel-vendor"/>&nbsp;&nbsp;&nbsp;
 
-          <TextField id="rate" label="Rate" margin="normal"/>&nbsp;&nbsp;&nbsp;<TextField id="start-kms" label="Start Kms" margin="normal"/>&nbsp;&nbsp;&nbsp;
-          <TextField id="end-km" label="End Km" margin="normal"/>&nbsp;&nbsp;&nbsp;<TextField id="weight" label="Weight" margin="normal"/>&nbsp;&nbsp;&nbsp;
+          <TextField id="rate" label="Rate" margin="normal" name="rate"/>&nbsp;&nbsp;&nbsp;<TextField id="start-kms" label="Start Kms" margin="normal" name="start-kms"/>&nbsp;&nbsp;&nbsp;
+          <TextField id="end-km" label="End Km" margin="normal" name="end-km"/>&nbsp;&nbsp;&nbsp;<TextField id="weight" label="Weight" margin="normal" name="weight"/>&nbsp;&nbsp;&nbsp;
 
-          <TextField id="trip-kms" label="Trip Kms" margin="normal"/>&nbsp;&nbsp;&nbsp;
+          <TextField id="trip-kms" label="Trip Kms" margin="normal" name="trip-kms"/>&nbsp;&nbsp;&nbsp;
 
-          <TextField id="trip-hrs" label="Trip Hrs" margin="normal"/>&nbsp;&nbsp;&nbsp;<TextField id="fuel-lts" label="Fuel lts" margin="normal"/>&nbsp;&nbsp;&nbsp;
-          <TextField id="fuel-rate" label="Fuel Rate" margin="normal"/>&nbsp;&nbsp;&nbsp;<TextField id="revenue" label="Revenue" margin="normal"/>
+          <TextField id="trip-hrs" label="Trip Hrs" margin="normal" name="trip-hrs"/>&nbsp;&nbsp;&nbsp;<TextField id="fuel-lts" label="Fuel lts" margin="normal" name="fuel-lts"/>&nbsp;&nbsp;&nbsp;
+          <TextField id="fuel-rate" label="Fuel Rate" margin="normal" name="fuel-rate"/>&nbsp;&nbsp;&nbsp;<TextField id="revenue" label="Revenue" margin="normal" name="revenue"/>
 
           <div className='submitButton'>
-          <Button variant="contained" color="secondary" className='submitButton'>
+          <Button variant="contained" color="secondary" className='submitButton' value="send-new-form">
             Submit
           </Button>
           </div>
