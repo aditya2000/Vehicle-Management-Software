@@ -7,9 +7,18 @@ import Order from '../order/order';
 import { BrowserRouter, Route, Switch, NavLink } from 'react-router-dom';
 import Button from '@material-ui/core/Button';
 
-const DashBoard = ({match, data}) => {
+import { connect } from 'react-redux';
+import { getItems } from '../../actions/itemActions';
+import PropTypes from 'prop-types';
 
-  const items = data;
+class DashBoard extends Component{
+
+  componentDidMount() {
+    this.props.getItems();
+  }
+
+ render() {
+    const {items} = this.props.item;
     return (
       <div>
         <ButtonAppBar color="primary"/>
@@ -24,8 +33,16 @@ const DashBoard = ({match, data}) => {
         </Grid>
 
       </div>
-    )
+    )}
   }
 
+DashBoard.propTypes = {
+  getItems: PropTypes.func.isRequired,
+  item: PropTypes.object.isRequired
+}
 
-export default DashBoard;
+const mapStateToProps = (state) => ({
+  item: state.item
+})
+
+export default connect(mapStateToProps, {getItems})(DashBoard);
