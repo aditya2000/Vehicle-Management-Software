@@ -11,20 +11,15 @@ class NewTruckForm extends Component {
         <h1>Add New Vehicle</h1>
         <form name="newTruckForm">
             <FormControl fullWidth >
-            <TextField id="driver-phone-number" label="Driver's Phone Number" margin="normal" name="driver-phone-number"/>
+            <TextField id="vehicle-number" label="Vehicle Number" margin="normal" name="vehicle-number"/>
             </FormControl>
 
             <FormControl fullWidth >
             <TextField id="driver-name" label="Driver Name" margin="normal" name="driver-name"/>
             </FormControl>
 
-            <TextField id="rate" label="Rate" margin="normal" name="rate"/>&nbsp;&nbsp;&nbsp;<TextField id="meals-tips" label="Meals & Tips" margin="normal" name="meal-tips"/>&nbsp;&nbsp;&nbsp;
-            <TextField id="fuel" label="Fuel" margin="normal" name="fuel"/>&nbsp;&nbsp;&nbsp;<TextField id="advances" label="Advances" margin="normal" name="advances"/>&nbsp;&nbsp;&nbsp;
-
-            <TextField id="maintainence-cost" label="Maintainence Cost" margin="normal" name="maintainence-cost"/>
-
             <FormControl fullWidth >
-            <TextField id="fastag-number" label="Fastag Number" margin="normal" name="fastag-number"/>
+            <TextField id="driver-phone-number" label="Driver's Phone Number" margin="normal" name="driver-phone-number"/>
             </FormControl>
 
             <div className='submitButton'>
