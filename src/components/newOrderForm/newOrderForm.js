@@ -9,8 +9,8 @@ class NewOrderForm extends Component {
   render() {
     return (
       <div className="orderForm">
-      <h1>Add New Order</h1>
       <form name="newOrderForm">
+        <h1>Add New Order</h1>
           <FormControl fullWidth >
           <TextField id="order-id" label="Order Id" margin="normal" name="order-id"/>
           </FormControl>

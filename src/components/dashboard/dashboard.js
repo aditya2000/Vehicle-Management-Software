@@ -8,13 +8,17 @@ import { BrowserRouter, Route, Switch, NavLink } from 'react-router-dom';
 import Button from '@material-ui/core/Button';
 
 import { connect } from 'react-redux';
-import { getItems } from '../../actions/itemActions';
+import { getItems, deleteItem } from '../../actions/itemActions';
 import PropTypes from 'prop-types';
 
 class DashBoard extends Component{
 
   componentDidMount() {
     this.props.getItems();
+  }
+
+  onDeleteClick = (id) => {
+    this.props.deleteItem(id);
   }
 
  render() {
@@ -25,10 +29,13 @@ class DashBoard extends Component{
         <h1>Dashboard</h1>
         <FloatingActionButtons color="primary"/>
         <Grid container>
-          {items.map((item) =>(<Grid item xs={6} sm={3} key={item.vehNum}>
-            <DashCard data={item}/>
-
-          </Grid>)
+          {items.map((item) =>(
+            <Grid item xs={6} sm={3} key={item.vehiclenumber}>
+              <DashCard data={item} />
+              <Button variant="outlined" color="secondary" className='submitButton' onClick={this.onDeleteClick.bind(this, item.vehiclenumber)}>
+                Delete
+              </Button>
+            </Grid>)
         )}
         </Grid>
 
@@ -45,4 +52,4 @@ const mapStateToProps = (state) => ({
   item: state.item
 })
 
-export default connect(mapStateToProps, {getItems})(DashBoard);
+export default connect(mapStateToProps, {getItems, deleteItem})(DashBoard);

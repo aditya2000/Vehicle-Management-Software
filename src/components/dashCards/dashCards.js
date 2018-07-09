@@ -19,13 +19,14 @@ const DashCard = (props) => (
     <div>
         <Card className='card'>
           <CardHeader
-            title={props.data.vehNum}
-            subheader={props.data.driverName}
+            title={props.data.vehiclenumber}
+            subheader={props.data.drivername}
           />
           <CardContent >
-          <NavLink to={`/order/${props.data.vehNum}`} className='link'><Button variant="contained" color="primary" className='submitButton'>
+          <NavLink to={`/order/${props.data.vehiclenumber}`} className='link'><Button variant="contained" color="primary" className='submitButton'>
             More
           </Button></NavLink>
+          <br /><br/>
           </CardContent>
         </Card>
       </div>
