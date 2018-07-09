@@ -67,9 +67,7 @@ class FloatingButtons extends Component {
      aria-labelledby="scroll-dialog-title"
    >
      <DialogContent>
-       <DialogContentText>
           {this.props.color === 'secondary'? (<NewOrderForm />) : (<NewTruckForm />)}
-       </DialogContentText>
      </DialogContent>
      <DialogActions>
        <Button onClick={this.handleClose}color="primary">

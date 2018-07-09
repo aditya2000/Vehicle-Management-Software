@@ -26,7 +26,6 @@ class NewTruckForm extends Component {
       vehiclenumber: this.state.vehiclenumber,
       drivername: this.state.drivername,
       driverphonenumber: this.state.driverphonenumber,
-      orders: []
     }
     //Adding Item via addItem action
     this.props.addItem(newItem);

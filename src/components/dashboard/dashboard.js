@@ -30,9 +30,9 @@ class DashBoard extends Component{
         <FloatingActionButtons color="primary"/>
         <Grid container>
           {items.map((item) =>(
-            <Grid item xs={6} sm={3} key={item.vehiclenumber}>
+            <Grid item xs={6} sm={3} key={item._id}>
               <DashCard data={item} />
-              <Button variant="outlined" color="secondary" className='submitButton' onClick={this.onDeleteClick.bind(this, item.vehiclenumber)}>
+              <Button variant="outlined" color="secondary" className='submitButton' onClick={this.onDeleteClick.bind(this, item._id)}>
                 Delete
               </Button>
             </Grid>)
